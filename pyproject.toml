@@ -1,0 +1,15 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "example_commit_workflow"
+authors = [
+    {name = "Hugo MacDermott-Opeskin", email = "hugomacdermott@gmail.com"},
+]
+
+license = {file = "LICENSE"}
+version = "0.1.0"
+
+[project.scripts]
+random_to_file = "scripts.random_to_file:main"
