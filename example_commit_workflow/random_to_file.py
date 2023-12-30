@@ -5,8 +5,9 @@ def main():
     args = parse_args()
     output_path = args.output_path
     random_number = random.randint(1, 100)
-    with open(output_path, "w") as f:
-        f.write(str(random_number))
+    timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    with open(output_path, "a") as f:
+        f.write(f"{random_number} {timestamp}")
     print(f"Random number generated and saved to file: {output_path}")
 
 def parse_args():
