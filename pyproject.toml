@@ -11,5 +11,8 @@ authors = [
 license = {file = "LICENSE"}
 version = "0.1.0"
 
+[tool.setuptools.packages.find]
+where = ["."]
+
 [project.scripts]
-random_to_file = "scripts.random_to_file:main"
+random_to_file = "example_commit_workflow.random_to_file:main"
