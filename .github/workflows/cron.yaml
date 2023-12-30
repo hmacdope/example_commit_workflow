@@ -1,0 +1,25 @@
+name: install and run python script
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  install_and_run:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.10' 
+      - run: python my_script.py
+
+      - name: install
+        run: |
+          pip install -e .
+
+      - name: run
+        run: |
+          random_to_file --output-path data/random.txt
