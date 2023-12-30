@@ -8,7 +8,7 @@ def main():
     random_number = random.randint(1, 100)
     timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     with open(output_path, "a") as f:
-        f.write(f"{random_number} {timestamp}")
+        f.write(f"{random_number} {timestamp}\n")
     print(f"Random number generated and saved to file: {output_path}")
 
 def parse_args():
